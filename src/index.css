@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: rgb(23, 21, 21);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.navbar-left{
+    display: flex;
+}
+
+.nav-icon{
+    display: flex;
+    color: white;
+    padding: 5px 15px;
+}
+.nav-icon>:first-child{
+    padding-right: 10px;
+}
+
+.imageCard{
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding-bottom: 20px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 10px;
+    transition: all 100ms ease-in;
+}
+
+.imageCard:hover {
+    scale: 1.1;
+}
+
+.imageCard img {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+}
+
+.image-card-title{
+    font-size: 16px;
+    padding: 0px 20px;
+    margin-top: 20px;
+
+    font-weight: 600;
+}
+
+.image-card-price{
+    font-size: 14px;
+    padding: 0px 20px;
+    margin-top: 5px;
+    color: grey;
+    letter-spacing: 1px;
+}
+
+.image-card-container{
+    display: grid;
+    grid-template-columns: repeat(5, 19%);
+    gap: 1.2%;
+    width: fit-content;
+}
+
+.app{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamberger{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .image-card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        gap: 2%;
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .image-card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        gap: 2%;
+        width: fit-content;
+    }
+
+     .navbar-left>div:nth-child(2), .navbar-left>div:nth-child(3), .navbar-left>div:nth-child(4){
+        display: none;
+    }
+    .hamberger{
+        display: block;
+    }
+}
